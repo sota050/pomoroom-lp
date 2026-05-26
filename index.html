@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PomoRoom</title>
+  <meta name="description" content="PomoRoomは、集中を整えるポモドーロタイマーアプリです。">
+  <style>
+    :root {
+      --bg: #f7f7f8;
+      --text: #1f1f1f;
+      --muted: #50535a;
+      --button: #1f1f1f;
+      --buttonText: #ffffff;
+      --card: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    main {
+      width: min(880px, 100%);
+      display: grid;
+      grid-template-columns: minmax(220px, 330px) 1fr;
+      gap: 24px;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid #ececee;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(26px, 5vw, 40px);
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 24px;
+      border: 1px solid #ececee;
+    }
+
+    .right-panel {
+      text-align: left;
+    }
+
+    .store-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 10px;
+      background: var(--button);
+      color: var(--buttonText);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    @media (max-width: 760px) {
+      main {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .right-panel {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img
+      src="./hero-timer-screen.png"
+      onerror="this.onerror=null; this.src='./assets/hero-timer-screen.png';"
+      alt="PomoRoomアプリ画面"
+    >
+    <section class="right-panel">
+      <h1>PomoRoom</h1>
+      <p>集中は、もっと美しくできる。</p>
+      <a
+        class="store-button"
+        href="https://apps.apple.com/us/app/pomoroom/id6769698874"
+        target="_blank"
+        rel="noopener"
+      >App Storeで見る</a>
+    </section>
+  </main>
+</body>
+</html>
